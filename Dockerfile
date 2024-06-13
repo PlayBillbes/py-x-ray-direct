@@ -1,4 +1,11 @@
-FROM python:ubuntu
+# Use the official Ubuntu image as a base
+FROM ubuntu:latest
+
+
+# Update package lists and install necessary packages
+RUN apt-get update && apt-get install -y \
+    python3 \
+    python3-pip \
 
 WORKDIR /python-docker
 
